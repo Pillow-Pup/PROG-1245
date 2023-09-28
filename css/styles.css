@@ -1,0 +1,14 @@
+/*
+    Erica Goodman
+    8766134
+*/
+body{
+    font: normal normal normal 12px/1.5 Verdana, Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width : 100vw;
+    background-color: hsla(185, 70%, 65%, 0.5);
+}
+h2{
+    font-size: 2rem;
+    color: #63c;
+}
