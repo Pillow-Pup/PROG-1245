@@ -12,3 +12,41 @@ h2{
     font-size: 2rem;
     color: #63c;
 }
+header{
+    background-color: hsl(33, 19%, 59%);
+}
+
+main{
+    float: left;
+    width: 65vw;
+    background-color: hsl(176, 100%, 37%);
+    height: 60vh;
+}
+aside{
+    float: right;
+    width: 25vw;
+    background-color: hsl(89, 65%, 62%);
+    height: 60vh;
+}
+footer{
+    clear: both; /*puts the footer under the main & aside*/
+    background-color: hsl(21, 72%, 37%);
+}
+.structural{
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+}
+#para1{
+    color: rgb(116, 30, 66);
+    
+}
+#para2{
+    color: rgb(21, 65, 146);
+}
+a:hover{/*Pseudo-class*/
+    color: #e42;
+}
+footer p{
+    font-size: .75em;
+}
