@@ -8,6 +8,10 @@ body{
     width : 100vw;
     background-color: hsla(185, 70%, 65%, 0.5);
 }
+h1{
+    color: coral;
+    font-size: 20px;
+}
 h2{
     font-size: 2rem;
     color: #63c;
@@ -16,22 +20,50 @@ header{
     background-color: hsl(33, 19%, 59%);
 }
 
+nav ul li{
+    display: inline;
+    list-style-type: none;
+}
+nav ul li a{
+    border: 2px solid indigo;
+    color: indigo;
+    background-color: cornsilk;
+    text-decoration: none; /*remove underline*/
+    padding: 5px;
+}
+nav ul li a:hover{
+    border: 2px solid cornsilk;
+    color: cornsilk;
+    background-color: indigo;
+}
+
 main{
     float: left;
     width: 65vw;
     background-color: hsl(176, 100%, 37%);
-    height: 60vh;
+    /*height: 60vh;*/
 }
+
 aside{
     float: right;
     width: 25vw;
     background-color: hsl(89, 65%, 62%);
-    height: 60vh;
+    /*height: 60vh;*/
 }
-footer{
-    clear: both; /*puts the footer under the main & aside*/
-    background-color: hsl(21, 72%, 37%);
+aside ul li a:hover{/*Pseudo-class*/
+    color: #e42;
 }
+aside ul{
+    list-style-type: circle;
+}
+aside ul li{
+    line-height: 1.5rem;
+    color: rgba(18, 121, 9, 0.9);
+}
+aside ul li a{
+    color: rgba(18, 121, 9, 0.9);
+}
+
 .structural{
     margin: 10px;
     padding: 10px;
@@ -44,8 +76,35 @@ footer{
 #para2{
     color: rgb(21, 65, 146);
 }
-a:hover{/*Pseudo-class*/
-    color: #e42;
+
+form{
+    border: 5px dashed rgb(135, 102, 200);
+}
+input[type=text], input[type=email], input[type=submit], select, option{
+    width: 50%;
+    display: block;
+    height: 2em;
+}
+input[type=radio], input[type=checkbox]{
+    height: 2em;
+    width: 2em;
+}
+select, option, label, legend, input[type=submit]{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+textarea{
+    width: 50%;
+    display: block;
+}
+fieldset{
+    border: none;
+}
+
+footer{
+    clear: both; /*puts the footer under the main & aside*/
+    background-color: hsl(21, 72%, 37%);
 }
 footer p{
     font-size: .75em;
