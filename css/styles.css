@@ -2,15 +2,21 @@
     Erica Goodman
     8766134
 */
+html{
+    font: normal normal normal 20px/1.5 Verdana, Arial, Helvetica, sans-serif;
+}
+
 body{
-    font: normal normal normal 12px/1.5 Verdana, Arial, Helvetica, sans-serif;
     height: 100vh;
     width : 100vw;
     background-color: hsla(185, 70%, 65%, 0.5);
+    display: flex;
+    flex-direction: column;
 }
+
 h1{
     color: coral;
-    font-size: 20px;
+    font-size: 2.5rem;
 }
 h2{
     font-size: 2rem;
@@ -18,8 +24,12 @@ h2{
 }
 header{
     background-color: hsl(33, 19%, 59%);
+    flex: 1 10%;
 }
 
+nav{
+    flex: 1 5%;
+}
 nav ul li{
     display: inline;
     list-style-type: none;
@@ -29,7 +39,7 @@ nav ul li a{
     color: indigo;
     background-color: cornsilk;
     text-decoration: none; /*remove underline*/
-    padding: 5px;
+    padding: 1em;
 }
 nav ul li a:hover{
     border: 2px solid cornsilk;
@@ -37,18 +47,23 @@ nav ul li a:hover{
     background-color: indigo;
 }
 
+section{
+    display: flex;
+    flex-direction: row;
+    flex: 4 8%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
 main{
-    float: left;
-    width: 65vw;
+    flex: 2 1 70%;
     background-color: hsl(176, 100%, 37%);
-    /*height: 60vh;*/
 }
 
 aside{
-    float: right;
-    width: 25vw;
+    flex: 1 2 30%;
     background-color: hsl(89, 65%, 62%);
-    /*height: 60vh;*/
 }
 aside ul li a:hover{/*Pseudo-class*/
     color: #e42;
@@ -65,13 +80,12 @@ aside ul li a{
 }
 
 .structural{
-    margin: 10px;
-    padding: 10px;
+    margin: 1rem;
+    padding: 1rem;
     border: 2px solid black;
 }
 #para1{
     color: rgb(116, 30, 66);
-    
 }
 #para2{
     color: rgb(21, 65, 146);
@@ -102,10 +116,39 @@ fieldset{
     border: none;
 }
 
+#gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+figure{
+    border: 1px solid black;
+}
+img{
+    width: 80%;
+    height: 80%;
+}
+
 footer{
-    clear: both; /*puts the footer under the main & aside*/
+    flex: 1 5%;
     background-color: hsl(21, 72%, 37%);
 }
 footer p{
     font-size: .75em;
+}
+
+@media(max-width: 1200px){
+    html{
+        font-size: 15px;
+    }
+}
+@media(max-width: 600px){
+    html{
+        font-size: 10px;
+    }
+    #gallery{
+        grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    }
 }
